@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+a{
+  text-decoration: none ; 
+  color:grey ;
+  font-family: 'goodtime';
+}
+a:hover{
+  color: #66B933;
+}
+
+input:focus{
+  outline: none;
+}
+button:focus{
+  outline: none;
+}
+.sections {
+  width: 100%;
+  background-color: #1C1C21;
+  position: relative; }
+
+.links-nav {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .links-nav li {
+    list-style: none;
+    padding: 10px 0 10px 10px;
+    height: 100%; }
+    .links-nav li a {
+      height: 100%;
+      padding: 14px; }
+    .links-nav li a:hover {
+      color: black;
+      background-color: #66B933;
+      transition: 0.5s; }
