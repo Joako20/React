@@ -1,11 +1,11 @@
 function NavBar() {
     return <>
-    <nav class="sections">
-        <ul class="links-nav">
-            <li><a href="./secciones/ofertas.html">Ofertas</a></li>
-            <li><a href="./secciones/productos.html">Productos</a></li>
-            <li><a href="./secciones/sobre-nosotros.html">Sobre Nosotros</a></li>
-            <li><a href="./secciones/contactanos.html">Contactanos</a></li>
+    <nav className="sections">
+        <ul className="links-nav">
+            <li><button>Ofertas</button></li>
+            <li><button>Productos</button></li>
+            <li><button>Sobre Nosotros</button></li>
+            <li><button>Contactanos</button></li>
         </ul>
     </nav>
 </>
