@@ -1,12 +1,16 @@
+import CartWidget from './CartWidget/CartWidget'
+import Button from '@material-ui/core/Button';
+
 function NavBar() {
     return <>
     <nav className="sections">
         <ul className="links-nav">
-            <li><button>Ofertas</button></li>
-            <li><button>Productos</button></li>
-            <li><button>Sobre Nosotros</button></li>
-            <li><button>Contactanos</button></li>
+            <li><Button color="secondary">Ofertas</Button></li>
+            <li><Button color="secondary">Productos</Button></li>
+            <li><Button color="secondary">Sobre nosotros</Button></li>
+            <li><Button color="secondary">Contactanos</Button></li>
         </ul>
+        <CartWidget/>
     </nav>
 </>
 }
