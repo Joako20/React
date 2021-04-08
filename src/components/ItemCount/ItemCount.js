@@ -13,7 +13,7 @@ export default class ItemCount extends Component {
 
     };
 
-    si = ()=>{
+    preventStockNull = ()=>{
         if(this.state.stock == false){
             this.state.count = 0
         }
@@ -37,7 +37,7 @@ export default class ItemCount extends Component {
     };  
 
     render() {
-        this.si()
+        this.preventStockNull()
         return (
             <div className="contador-container">
                 <p>{this.state.count}</p>
