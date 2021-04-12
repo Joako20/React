@@ -50,9 +50,9 @@ import './ItemCount.css'
 //     }
 // }
 
-function ItemCount({stockNum, initial, stockE}) {
+function ItemCount({stockNum, initial, stockE,}) {
     
-    function preventStockNull(){
+    let preventStockNull = ()=>{
         if(stockE == false){
            return "0"
         }
@@ -65,9 +65,10 @@ function ItemCount({stockNum, initial, stockE}) {
         if(stockE == false || initial == stockNum){
         }
         else{
-            let parrafo = document.getElementById("prueba")
+            let parrafo = document.getElementById("cantidad")
             initial = Number(initial) + 1
             parrafo.innerHTML=`${initial}`
+            
         }
     };
 
@@ -75,20 +76,34 @@ function ItemCount({stockNum, initial, stockE}) {
         if(stockE == false || initial == 0){
         }
         else{
-            let parrafo = document.getElementById("prueba")
+            let parrafo = document.getElementById("cantidad")
             initial = Number(initial) - 1
             parrafo.innerHTML=`${initial}`
+            
         }
     };
 
+    let add = ()=>{
+        if(stockE == false){
+            let confirm = document.getElementById("confirm")
+            confirm.innerHTML=`No hay stock!!!`
+        }
+        else{
+        let confirm = document.getElementById("confirm")
+        confirm.innerHTML=`Se han agregado ${initial} unidades`
+        }
+        
+    }
+
     return <>
-    
     <div className="contador-container">
-        <p id="prueba">{preventStockNull()}</p>
+        <p id="cantidad">{preventStockNull()}</p>
         <div className="button-container">
             <Button variant="contained" color="primary" onClick={handleDecrement}>-</Button>
             <Button variant="contained" color="primary" onClick={handleIncrement}>+</Button>
         </div>
+        <Button id="prodUnidades" variant="contained" color="primary" onClick={add}>Agregar al carrito</Button>
+        <p id="confirm"></p>
     </div>
     </>
 
