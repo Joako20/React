@@ -8,7 +8,7 @@ function App() {
       <h1>E-comerce Horizon</h1>
       <NavBar/>
       <ItemListContainer greetings="Hola, soy una bienvenida provisional" />
-      <ItemCount/>
+      <ItemCount initial="1" stockNum="5" stockE={true} />
     </div>
     
     
